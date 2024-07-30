@@ -12,7 +12,7 @@
                     </ul>
                 </div>
                 <div class="footer__main-left">
-                    <img src="img/logo-mainThin.svg" alt="NAVI" style="background-color: #bdffd7">
+                    <img src="/img/logo-mainThin.svg" alt="NAVI" class="logo">
                     <span>Дизайн интерьера <br>и архитектурное проектирование</span>
                 </div>
                 <div class="footer__main-right">
@@ -38,7 +38,7 @@
             </div>
             <div class="footer__bottom">
                 <span>© 2021-2024, NAVI</span>
-                <a href="./../privacy.php">Политика конфиденциальности</a>
+                <a href="/privacy.php">Политика конфиденциальности</a>
             </div>
         </div>
     </div>
