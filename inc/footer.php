@@ -4,11 +4,11 @@
             <div class="footer__main">
                 <div class="footer__main-center">
                     <ul>
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="portfolio.html">Портфолио</a></li>
-                        <li><a href="services.html">Услуги</a></li>
-                        <li><a href="about.html">О студии</a></li>
-                        <li><a href="contact.html">Контакты</a></li>
+                        <li><a href="/index.php">Главная</a></li>
+                        <li><a href="/portfolio.php">Портфолио</a></li>
+                        <li><a href="/services.php">Услуги</a></li>
+                        <li><a href="/about.php">О студии</a></li>
+                        <li><a href="/contact.php">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer__main-left">
