@@ -1,0 +1,14 @@
+{
+  "name": "navi",
+  "version": "1.0.0",
+  "description": "navi",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "photoswipe": "^5.4.4"
+  }
+}

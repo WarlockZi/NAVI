@@ -1,0 +1,31 @@
+DirectoryIndex index.php
+Options -Indexes +FollowSymLinks
+php_flag short_open_tag On
+
+RewriteEngine on
+RewriteBase /
+
+
+RewriteCond %{REQUEST_URI} !\?
+RewriteCond %{REQUEST_URI} !\&amp;
+RewriteCond %{REQUEST_URI} !\=
+RewriteCond %{REQUEST_URI} !\.
+RewriteCond %{REQUEST_URI} ![^\/]$
+RewriteRule ^(.*)\/$ /$1 [R=301,L]
+
+
+RewriteCond %{REQUEST_URI} !^/pic.*
+RewriteCond %{REQUEST_URI} !/robots.txt$
+RewriteCond %{REQUEST_URI} !/sitemap.xml$
+RewriteRule ^(.*)$ public/$1
+#RewriteEngine on
+#
+#<IfModule mod_rewrite.c>
+#RewriteEngine On
+#
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#
+#RewriteRule ^(.*)$ public/project.php?url=$4 [PT,L]
+#
+#</IfModule>
