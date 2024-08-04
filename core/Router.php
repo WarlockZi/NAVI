@@ -21,7 +21,7 @@ class Router
         $this->route->setMethod($_SERVER['REQUEST_METHOD']);
         if ($this->routeFound()) {
 
-            $path = ROOT . "pages{$this->route->page}.php";
+            $path = ROOT . "pages\\{$this->route->page}.php";
             ob_start();
             include $path;
             $content = ob_get_clean();
