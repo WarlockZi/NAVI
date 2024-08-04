@@ -15,7 +15,7 @@
                 <ul>
                     <li style="animation-delay: 0s;"><a href="/">Главная</a></li>
                     <li style="animation-delay: 0.15s;"><a href="/portfolio">Портфолио</a></li>
-                    <li style="animation-delay: 0.25s;"><a href="/services">Услуги</a></li>
+                    <li style="animation-delay: 0.25s;"><a href="/service">Услуги</a></li>
                     <li style="animation-delay: 0.35s;"><a href="/about">О студии</a></li>
                     <li style="animation-delay: 0.45s;"><a href="/contact">Контакты</a></li>
                     <li style="animation-delay: 0.55s;"><a href="tel:<?= CONSTANTS['tel'] ?>"
