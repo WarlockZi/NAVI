@@ -1,11 +1,10 @@
-const hamb = document.querySelector("#hamb");
-const popup = document.querySelector("#popup-menu");
-const body = document.body;
+ const hamb = document.querySelector("#hamb");
+ const popup = document.querySelector("#popup-menu");
+ const body = document.body;
 
-const menu = document.querySelector("#menu").cloneNode(1);
+ const menu = document.querySelector("#menu").cloneNode(1);
 
 hamb.addEventListener("click", hambHandler);
-
 function hambHandler(e) {
   e.preventDefault();
   // Переключаем стили элементов при клике
@@ -18,18 +17,21 @@ function renderPopup() {
   popup.appendChild(menu);
 }
 
+
 const links = Array.from(menu.children);
 
 links.forEach((link) => {
   link.addEventListener("click", closeOnClick);
 });
 
+//hamb
 function closeOnClick() {
   popup.classList.remove("open");
   hamb.classList.remove("active");
   body.classList.remove("noscroll");
 }
 
+//tel validate
 $(function(){
   $('input[type="tel"]').on('input', function () {
       let val = $('input[type="tel"]').val();
@@ -40,11 +42,13 @@ $(function(){
   $('input[type="tel"]').mask('+7 (000) 000-00-00');
 });
 
+//header show up
 $(document).scroll(function(e) {
-  $(window).scrollTop() > 1000 ? $('header').addClass('fixed') : $('header').removeClass('fixed');
-  $(window).scrollTop() > 1000 ? $('.top').addClass('top-active') : $('.top').removeClass('top-active');
+  $(window).scrollTop() > 50 ? $('header').addClass('fixed') : $('header').removeClass('fixed');
+  $(window).scrollTop() > 50 ? $('.top').addClass('top-active') : $('.top').removeClass('top-active');
 });
 
+//category filter
 $(function(){
   if($('body').is('[page-porfolio]')){
     const categoryBtn = document.querySelector(".select-category__btn");

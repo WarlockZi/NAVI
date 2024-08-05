@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="<?=CONSTANTS['css'][0]?>">
     <link rel="stylesheet" href="<?=CONSTANTS['css'][1]?>">
+    <link rel="stylesheet" href="<?=CONSTANTS['css'][2]?>">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/public/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/public/img/favicon/favicon-32x32.png">
@@ -17,8 +18,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#171717">
 
-    <meta property="og:site_name" content="<? CONSTANTS['site'] ?>">
-    <meta property="og:title" content="<? CONSTANTS['site'] ?> - Студия премиального дизайна интерьеров">
+    <meta property="og:site_name" content="<?php CONSTANTS['site'] ?>">
+    <meta property="og:title" content="<?php CONSTANTS['site'] ?> - Студия премиального дизайна интерьеров">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Мы создаем эксклюзивный и премиальный дизайн для любого типа недвижимости">
     <meta property="og:url" content="<?= CONSTANTS['url'] ?>">
@@ -27,5 +28,5 @@
     <meta property="og:image:height" content="200">
     <meta property="og:image:alt" content="navi">
 
-    <? include 'yaMetricaLong.php' ?>
+    <?php include 'yaMetricaLong.php' ?>
 </head>

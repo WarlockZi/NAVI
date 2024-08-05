@@ -1,6 +1,6 @@
 <a href="/portfolio/project/<?= $id ?>" class="portfolio__item js-filterable"
-   data-category="life"
-   style="background-image: url(<?=img;?>);">
+   data-category="<?=$filter;?>"
+   style="background-image: url(<?=$img;?>);">
     <div class="portfolio__label">
         <span><?= $category ?></span>
         <span><?= $area ?> м<sup>2</sup></span>

@@ -2,7 +2,7 @@
 <header>
     <div class="container">
         <div class="header">
-            <a href="/pages/index.php">
+            <a href="/">
                 <img src="/public/img/logo-mainThin.svg" alt="Нави" class="logo">
             </a>
             <div class="hamb">

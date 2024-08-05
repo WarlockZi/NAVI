@@ -46,4 +46,4 @@
 <script src="<?=CONSTANTS['js'][0];?>"></script>
 <script src="<?=CONSTANTS['js'][1];?>"></script>
 <script async src="<?=CONSTANTS['js'][2];?>"></script>
-<script src="<?=CONSTANTS['js'][3];?>"></script>
+<script type="module" src="<?=CONSTANTS['js'][3];?>"></script>

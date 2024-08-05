@@ -1,6 +1,6 @@
 <section class="main">
 
-    <?php include  CONSTANTS['header']; ?>
+    <?php include CONSTANTS['header']; ?>
 
     <div class="main__wrap">
         <div class="container" style="height: 100%;">
@@ -84,12 +84,15 @@
         </div>
     </div>
 </section>
+
 <section class="services">
+
     <div class="container">
         <h2 class="section-title">Наши услуги</h2>
     </div>
+
     <div class="services__wrapper">
-        <a href="services.php" class="services__item">
+        <a href="/services" class="services__item">
             <div class="services__item-heading">
                 <h3>Жилые <br>интерьеры</h3>
                 <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +101,7 @@
                 </svg>
             </div>
         </a>
-        <a href="services.php" class="services__item">
+        <a href="/services" class="services__item">
             <div class="services__item-heading">
                 <h3>Коммерческие <br>интерьеры</h3>
                 <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -107,7 +110,7 @@
                 </svg>
             </div>
         </a>
-        <a href="services.php" class="services__item">
+        <a href="/services" class="services__item">
             <div class="services__item-heading">
                 <h3>Архитектурное <br>проектирование</h3>
                 <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,6 +120,7 @@
             </div>
         </a>
     </div>
+
     <div class="container">
         <div class="services__second">
             <div class="services__second-item">
@@ -145,76 +149,40 @@
             </div>
         </div>
     </div>
+
 </section>
+
 <section class="portfolio">
     <div class="container">
         <div class="portfolio__heading">
             <h2 class="section-title">Наше портфолио</h2>
             <span>Найдите вдохновение среди наших проектов</span>
         </div>
+
+
         <div class="portfolio__wrapper">
-            <a href="portfolio/project/index.html@id=31.html" class="portfolio__item js-filterable"
-               data-category="life"
-               style="background-image: url(../public/img/projects/30/prefix_664213aeb21e79.40205653.jpg);">
-                <div class="portfolio__label">
-                    <span>Жилые интерьеры</span>
-                    <span>69 м<sup>2</sup></span>
-                </div>
-                <h5>Апартаменты </h5>
-                <div class="portfolio__shadow"></div>
-            </a>
-            <a href="portfolio/project/index.html@id=23.html" class="portfolio__item js-filterable"
-               data-category="life"
-               style="background-image: url(../public/img/projects/21/prefix_663b1d754354a2.02517305.jpg);">
-                <div class="portfolio__label">
-                    <span>Жилые интерьеры</span>
-                    <span>240 м<sup>2</sup></span>
-                </div>
-                <h5>Дом в охотугодьях</h5>
-                <div class="portfolio__shadow"></div>
-            </a>
-            <a href="portfolio/project/index.html@id=24.html" class="portfolio__item js-filterable"
-               data-category="life"
-               style="background-image: url(../public/img/projects/222/prefix_663b1f851aab27.45661609.jpg);">
-                <div class="portfolio__label">
-                    <span>Жилые интерьеры</span>
-                    <span>82 м<sup>2</sup></span>
-                </div>
-                <h5>Элегантная квартира с нотками изысканности</h5>
-                <div class="portfolio__shadow"></div>
-            </a>
-            <a href="portfolio/compare/index.html@id=25.html" class="portfolio__item js-filterable"
-               data-category="land"
-               style="background-image: url(../public/img/projects/8/prefix_663b231a8270d0.61914394.jpg);">
-                <div class="portfolio__label">
-                    <span>Ландшафтный дизайн</span>
-                    <span>5000 м<sup>2</sup></span>
-                </div>
-                <h5>Дивный сад</h5>
-                <div class="portfolio__shadow"></div>
-            </a>
-            <a href="portfolio/project/index.html@id=26.html" class="portfolio__item js-filterable"
-               data-category="life"
-               style="background-image: url(../public/img/projects/222/prefix_663b249c9f5325.23437613.jpg);">
-                <div class="portfolio__label">
-                    <span>Жилые интерьеры</span>
-                    <span>64 м<sup>2</sup></span>
-                </div>
-                <h5>Квартира в современном стиле</h5>
-                <div class="portfolio__shadow"></div>
-            </a>
-            <a href="portfolio/project/index.html@id=27.html" class="portfolio__item js-filterable"
-               data-category="commerce"
-               style="background-image: url(../public/img/projects/20/prefix_663b25925aea85.06719067.jpg);">
-                <div class="portfolio__label">
-                    <span>Коммерческие интерьеры</span>
-                    <span>96 м<sup>2</sup></span>
-                </div>
-                <h5>Магазин фермерских продуктов</h5>
-                <div class="portfolio__shadow"></div>
-            </a>
+
+            <?php
+            $projects = CONSTANTS['getProject']();
+            $i=0;
+            foreach ($projects as $index=>$project) //                ($projects as $index => $project)
+            {
+                if ($i>3)continue;
+                $data = CONSTANTS['projects'][$index];
+
+                $img      = "/public/img/projects/{$index}/" . $projects[$index][0];
+                $category = $data['category'];
+                $area     = $data['area'];
+                $title    = $data['title'];
+                include INC . '/portfolio-img.php';
+                $i++;
+            }
+            ?>
+
         </div>
-        <a href="portfolio.php" class="more__portfolio">
+
+
+        <a href="/portfolio" class="more__portfolio">
             Посмотреть все проекты
             <?= CONSTANTS['arrow'] ?>
         </a>
