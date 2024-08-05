@@ -32,6 +32,8 @@ define('CONSTANTS', [
         "vk" => "https://vk.com/natalirem",
         "watsapp" => "https://wa.me/79814239892",
 
+        'logo'=>'/public/img/logo.png',
+
         "arrow" => file_get_contents(ICONS . "arrow.svg"),
         "small-arrow" => file_get_contents(ICONS . "small-arrow.svg"),
         "chevron" => file_get_contents(ICONS . "chevron.svg"),

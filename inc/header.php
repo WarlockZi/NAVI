@@ -3,7 +3,7 @@
     <div class="container">
         <div class="header">
             <a href="/">
-                <img src="/public/img/logo-mainThin.svg" alt="Нави" class="logo">
+                <img src="<?= CONSTANTS['logo'] ?>" alt="Нави" class="logo">
             </a>
             <div class="hamb">
                 <div class="hamb__field" id="hamb">

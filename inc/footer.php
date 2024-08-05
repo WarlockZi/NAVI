@@ -12,7 +12,7 @@
                     </ul>
                 </div>
                 <div class="footer__main-left">
-                    <img src="/public/img/logo-mainThin.svg" alt="NAVI" class="logo">
+                    <img src="<?= CONSTANTS['logo'] ?>" alt="NAVI" class="logo">
                     <span>Дизайн интерьера <br>и архитектурное проектирование</span>
                 </div>
                 <div class="footer__main-right">
