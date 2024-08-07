@@ -33,6 +33,7 @@ define('CONSTANTS', [
         "watsapp" => "https://wa.me/79814239892",
 
         'logo'=>'/public/img/logo.png',
+        'avatar'=>'/public/img/avatar.jpg',
 
         "arrow" => file_get_contents(ICONS . "arrow.svg"),
         "small-arrow" => file_get_contents(ICONS . "small-arrow.svg"),

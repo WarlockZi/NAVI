@@ -174,6 +174,7 @@
                 $category = $data['category'];
                 $area     = $data['area'];
                 $title    = $data['title'];
+                $filter = $data['filter'];
                 include INC . '/portfolio-img.php';
                 $i++;
             }
