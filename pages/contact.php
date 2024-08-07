@@ -20,3 +20,11 @@
 
     </div>
 </section>
+
+<?php
+if ($_POST) {
+    $req = $_POST;
+    http_response_code(200);
+    echo json_encode(['success'=>'jj']);
+}
+?>

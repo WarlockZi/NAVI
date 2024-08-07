@@ -130,7 +130,7 @@ $('.contact-form').submit(function(event) {
           recaptchaResponse.value = token;
 
           $.ajax({
-              url: 'https://navi.net.ru/includes/contact.php',
+              url: '/contact',
               type: 'post',
               data: $('.contact-form').serialize(),
               dataType: 'json',
