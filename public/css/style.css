@@ -320,9 +320,9 @@ header nav ul li a:hover,
     transition: 0.3s;
 }
 
-.social a:hover > svg path {
-    fill: var(--light-gold);
-}
+/*.social a:hover > svg path {*/
+/*    fill: var(--light-gold);*/
+/*}*/
 
 .hamb {
     display: none;
@@ -1030,11 +1030,20 @@ footer:before{
     margin-bottom: 5px;
     filter: brightness(60%);
 }
-.telegram{
-    color:blue;
+.telegram, .vk, .watsapp{
+    color:white;
 }
-.watsapp{}
-.vk{}
+.telegram:hover, .vk:hover, .watsapp:hover{
+}
+.telegram:hover{
+    color:#2AABEE;
+}
+.watsapp:hover{
+    color:#25D366;
+}
+.vk:hover{
+    color:#0077ff;
+}
 
 .footer__bottom span {
     font-family: "Geometria", sans-serif;
