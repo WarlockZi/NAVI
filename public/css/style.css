@@ -1026,7 +1026,15 @@ footer:before{
 .avatar{
     width: 34px;
     border-radius: 27%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    filter: brightness(60%);
 }
+.telegram{
+    color:blue;
+}
+.watsapp{}
+.vk{}
 
 .footer__bottom span {
     font-family: "Geometria", sans-serif;

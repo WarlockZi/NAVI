@@ -23,15 +23,9 @@
                     </li>
                     <li style="animation-delay: 0.65s;">
                         <div class="social">
-                            <a href="<?= CONSTANTS['telgramm'] ?>" target="_blank">
-                                <img src="/public/img/icons/telegram.svg">
-                            </a>
-                            <a href="<?= CONSTANTS['vk'] ?>" target="_blank">
-                                <img src="/public/img/icons/vk.svg">
-                            </a>
-                            <a href="<?= CONSTANTS['watsapp'] ?>" target="_blank">
-                                <img src="/public/img/icons/watsapp.svg">
-                            </a>
+                            <?include INC.'/telegram.php'?>
+                            <?include INC.'/vk.php'?>
+                            <?include INC.'/watsapp.php'?>
                         </div>
                     </li>
                 </ul>
