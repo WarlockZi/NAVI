@@ -34,7 +34,7 @@
                 <span>© 2021-2024, NAVI</span>
                 <a href="/privacy">Политика конфиденциальности</a>
                 <a href="https://vitexopt.ru">
-                    Cоздано в студии VORONIKLAB
+                    VORONIKLAB
                     <img src="<?= CONSTANTS['avatar'];?>" class="avatar">
                 </a>
             </div>
