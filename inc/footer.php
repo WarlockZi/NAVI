@@ -40,6 +40,7 @@
             </div>
         </div>
     </div>
+
 </footer>
 <script src="<?=CONSTANTS['js'][0];?>"></script>
 <script src="<?=CONSTANTS['js'][1];?>"></script>

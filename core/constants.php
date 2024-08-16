@@ -27,6 +27,7 @@ define('CONSTANTS', [
 
         'city' => "г. Москва",
         'address' => 'Пресненская наб, 12',
+        'email' => 'navi@yandex.ru',
 
         "telgramm" => "https://t.me/Natalish",
         "vk" => "https://vk.com/natalirem",
