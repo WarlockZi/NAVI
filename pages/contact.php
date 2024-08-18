@@ -33,13 +33,14 @@ if ($_POST) {
     $square = \core\Clean::int($_POST['square']);
     $city   = \core\Clean::str($_POST['city']);
     $option = \core\Clean::str($_POST['option']);
+    $newLine = "%0A";
     $text   =
-        "Наталиша, возьмешь еще заказ?" .
-        "Имя - $name" . PHP_EOL .
-        "тел - $phone" . PHP_EOL .
-        "площадь - $square" . PHP_EOL .
-        "город - $city" . PHP_EOL .
-        "тип - $option" . PHP_EOL;
+        "Наталиша, возьмешь еще заказ?$newLine" .
+        "Имя - $name$newLine" .
+        "тел - $phone$newLine" .
+        "площадь - $square$newLine" .
+        "город - $city$newLine" .
+        "тип - $option$newLine";
 
     $url = "https://api.telegram.org/bot$token/sendMessage?&chat_id=$chatId&text=$text";
 
