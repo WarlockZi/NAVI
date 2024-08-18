@@ -27,11 +27,14 @@ define('CONSTANTS', [
 
         'city' => "г. Москва",
         'address' => 'Пресненская наб, 12',
-        'email' => 'navi@yandex.ru',
 
+        'email' => 'Nat9029@ya.ru',
         "telgramm" => "https://t.me/Natalish",
         "vk" => "https://vk.com/natalirem",
         "watsapp" => "https://wa.me/79814239892",
+
+        "TELEGRAM_TOKEN"=>"6473176841:AAGnbVMnwVcQYzN7YpWdN4gEhKp4Q1LUfgM",
+        "TELEGRAM_CHATID"=>"315610444",
 
         'logo'=>'/public/img/logo.png',
         'avatar'=>'/public/img/avatar.jpg',

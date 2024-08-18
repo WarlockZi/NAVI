@@ -1,5 +1,3 @@
-<?php ob_start(); ?>
-
 <?php include CONSTANTS['header']; ?>
 
     <section class="contact-page">
@@ -22,17 +20,13 @@
 
         </div>
     </section>
-<?php $content = ob_get_clean(); ?>
+
 
 <?php
 if ($_POST) {
+    new \service\Telegram($_POST);
 
-    $name   = \core\Clean::str($_POST['name']);
-    $phone  = \core\Clean::str($_POST['phone']);
-    $square = \core\Clean::int($_POST['square']);
-    $city   = \core\Clean::str($_POST['city']);
-    $option = \core\Clean::str($_POST['option']);
-
+    $content = "<h1>ff</h1>";
     http_response_code(200);
     header("Content-Type: application/json");
     $data = json_encode(['success' => $content]);

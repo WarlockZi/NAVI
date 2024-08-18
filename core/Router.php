@@ -6,12 +6,13 @@ class Router
 {
     public function __construct(
         private array $routes = [
-            '/^(?P<page>\/portfolio\/project)\/(?P<id>[0-9a-zA-z]+)$/',
-            '/^(?P<page>\/portfolio)$/',
-            '/^(?P<page>\/services)$/',
-            '/^(?P<page>\/about)$/',
-            '/^(?P<page>\/contact)$/',
-            '/^(?P<page>\/privacy)$/',
+            '/^\/(?P<page>portfolio\/project)\/(?P<id>[0-9a-zA-z]+)$/',
+            '/^\/(?P<page>portfolio)$/',
+            '/^\/(?P<page>services)$/',
+            '/^\/(?P<page>about)$/',
+            '/^\/(?P<page>contact)$/',
+            '/^\/(?P<page>privacy)$/',
+            '/^\/(?P<page>form-handler)$/',
             '/^\/$/',
         ],
         private Route $route = new Route(),

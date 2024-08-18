@@ -1,0 +1,18 @@
+{
+    "name": "vvoro/navi",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Vvoro\\Navi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vitaliy new pc",
+            "email": "vvoronik@yandex.ru"
+        }
+    ],
+    "require": {
+        "longman/telegram-bot": "^0.83.1"
+    }
+}
