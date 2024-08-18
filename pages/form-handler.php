@@ -9,6 +9,7 @@ $square = \core\Clean::int($_POST['square']);
 $city   = \core\Clean::str($_POST['city']);
 $option = \core\Clean::str($_POST['option']);
 $text   =
+    "Наталиша, возьмешь еще заказ?".
     "Имя - $name" . PHP_EOL .
     "тел - $phone" . PHP_EOL .
     "площадь - $square" . PHP_EOL .
