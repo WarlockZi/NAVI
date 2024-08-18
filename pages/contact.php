@@ -26,7 +26,7 @@
 if ($_POST) {
     $token  = CONSTANTS['TELEGRAM_TOKEN'];
     $NatashaId = 6243120828;
-    $chatId = CONSTANTS['TELEGRAM_CHATID'];
+    $VitaliyId = CONSTANTS['TELEGRAM_CHATID'];
 
 
     $name   = \core\Clean::str($_POST['name']);
@@ -43,9 +43,10 @@ if ($_POST) {
         "город - $city$newLine" .
         "тип - $option$newLine";
 
-    $url = "https://api.telegram.org/bot$token/sendMessage?&chat_id=$NatashaId&text=$text";
+    $url = "https://api.telegram.org/bot$token/sendMessage?&chat_id=$VitaliyId&text=$text";
 
     header("Location:" . $url);
+    exit('success');
 //    new \service\Telegram($_POST);
 //    $content = "<h1>ff</h1>";
 //    http_response_code(200);
