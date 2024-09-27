@@ -24,18 +24,19 @@
 
 <?php
 if ($_POST) {
-    $token  = CONSTANTS['TELEGRAM_TOKEN'];
+    $token     = CONSTANTS['TELEGRAM_TOKEN'];
     $NatashaId = 6243120828;
     $VitaliyId = CONSTANTS['TELEGRAM_CHATID'];
 
+    $chatId = $VitaliyId;
 
-    $name   = \core\Clean::str($_POST['name']);
-    $phone  = \core\Clean::str($_POST['phone']);
-    $square = \core\Clean::int($_POST['square']);
-    $city   = \core\Clean::str($_POST['city']);
-    $option = \core\Clean::str($_POST['option']);
+    $name    = \core\Clean::str($_POST['name']);
+    $phone   = \core\Clean::str($_POST['phone']);
+    $square  = \core\Clean::int($_POST['square']);
+    $city    = \core\Clean::str($_POST['city']);
+    $option  = \core\Clean::str($_POST['option']);
     $newLine = "%0A";
-    $text   =
+    $text    =
         "Наталиша, возьмешь еще заказ?$newLine" .
         "Имя - $name$newLine" .
         "тел - $phone$newLine" .
@@ -43,7 +44,12 @@ if ($_POST) {
         "город - $city$newLine" .
         "тип - $option$newLine";
 
-    $url = "https://api.telegram.org/bot$token/sendMessage?&chat_id=$VitaliyId&text=$text";
+    $url = "https://api.telegram.org/bot" .
+        $token .
+        "/sendMessage?&chat_id=" .
+        $chatId .
+        "&text=" .
+        $text;
 
     header("Location:" . $url);
     exit('success');

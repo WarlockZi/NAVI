@@ -22,6 +22,5 @@
         <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
         <button type="submit">Отправить</button>
     </form>
-    <span>Нажимая кнопку, вы автоматически соглашаетесь
-                        с <a href="/privacy">политикой конфиденциальности</a></span>
+    <span>Нажимая кнопку, вы автоматически соглашаетесьс <a href="/privacy">политикой конфиденциальности</a></span>
 </div>

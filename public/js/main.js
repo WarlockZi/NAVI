@@ -1,14 +1,12 @@
 const hamb = document.querySelector("#hamb");
 const popup = document.querySelector("#popup-menu");
 const body = document.body;
-
 const menu = document.querySelector("#menu").cloneNode(1);
 
 hamb.addEventListener("click", hambHandler);
 
 function hambHandler(e) {
    e.preventDefault();
-   // Переключаем стили элементов при клике
    popup.classList.toggle("open");
    hamb.classList.toggle("active");
    body.classList.toggle("noscroll");
@@ -83,7 +81,7 @@ $(function () {
 
 $('.js-filter').on('click', function () {
 
-   var $category = $(this).attr('data-category');
+   const $category = $(this).attr('data-category');
 
    $('.js-filterable').css({
       "opacity": "0",
@@ -124,11 +122,11 @@ if (document.querySelectorAll(".main__imgs img").length) {
 
 
 $('.contact-form').submit(function (event) {
-   event.preventDefault(); // Prevent direct form submission
-   $('#alert').text('Отправка...').fadeIn(0); // Display "Processing" to let the user know that the form is being submitted
+   event.preventDefault();
+   $('#alert').text('Отправка...').fadeIn(0);
    grecaptcha.ready(function () {
-      grecaptcha.execute('6LdJAJUpAAAAAOLzQcRYt4rw-oBJi00uckalA2H5', {action: 'contact'}).then(function (token) {
-         var recaptchaResponse = document.getElementById('recaptchaResponse');
+      grecaptcha.execute('6Lc0jCkqAAAAAAkF51wmJzIbQjjKB4D2_OvZ6m0x', {action: 'contact'}).then(function (token) {
+         const recaptchaResponse = document.getElementById('recaptchaResponse');
          recaptchaResponse.value = token;
          async function sendMessage(text)
          {
@@ -156,10 +154,9 @@ $('.contact-form').submit(function (event) {
             data: $('.contact-form').serialize(),
             dataType: 'json',
             success: async function (_response) {
-               debugger
                const res = await sendMessage('dd')
-               var error = _response.error;
-               var success = _response.success;
+               const error = _response.error;
+               const success = _response.success;
                if (error !== "" && error !== undefined) {
 
                } else {
@@ -168,9 +165,7 @@ $('.contact-form').submit(function (event) {
                window.location.href = '/contact'
             },
             error: function (jqXhr, json, errorThrown) {
-               debugger
-
-               var error = jqXhr.responseText;
+               const error = jqXhr.responseText;
                $('#alert').html(error);
             }
          });
