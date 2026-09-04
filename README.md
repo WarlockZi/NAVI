@@ -1,1 +1,1 @@
-navi.github.io
+navi
